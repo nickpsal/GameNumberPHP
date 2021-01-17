@@ -29,6 +29,9 @@
         <title>Guess the number Game</title>
     </head>
     <body>
+        <div class="box">
+            <img src="images/logo.png" class="d-block mx-auto" alt="logo">
+        </div>
         <div class="container">
             <H1 class="page-header">Guess the number Game</H1>
             <H3> 
