@@ -33,7 +33,6 @@
             <img src="images/logo.png" class="d-block mx-auto" alt="logo">
         </div>
         <div class="container">
-            <H1 class="page-header">Guess the number Game</H1>
             <H3> 
                 The computer generates a number between 1 and 200 and the user tries to quess that number
             </H3>
