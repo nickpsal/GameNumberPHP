@@ -6,16 +6,20 @@
     include "includes/check.php";
     if (isset($_POST['player_number'])) {
         $number= $_POST["number"];
-        $result = check_number($number);
-        if ($result == 0) {
-            $message = 'Your number is Bigger than the compouters number';
-            $_SESSION['num']++;
-        }else if ($result == 1) {
-            $message = 'Your number is smaller than the computers number';
-            $_SESSION['num']++;
+        if ($number >=1 && $number <=200) {
+                $result = check_number($number);
+            if ($result == 0) {
+                $message = 'Your number is Bigger than the compouters number';
+                $_SESSION['num']++;
+            }else if ($result == 1) {
+                $message = 'Your number is smaller than the computers number';
+                $_SESSION['num']++;
+            }else {
+                $message = $_SESSION['computer_num'] . ' You found it with ' . $_SESSION['num'] . ' tries!!!!!!!!';
+                unset($_SESSION["computer_num"], $_SESSION['num']);
+            }
         }else {
-            $message = $_SESSION['computer_num'] . ' You found it with ' . $_SESSION['num'] . ' tries!!!!!!!!';
-            unset($_SESSION["computer_num"], $_SESSION['num']);
+            $message = 'Invalid number Please enter a number between 1 and 200';
         }
     }
 ?>
